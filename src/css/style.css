@@ -1,0 +1,144 @@
+:root {
+    --color-standard-top: #201863;
+    --color-standard-bottom: #321f4e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: radial-gradient(var(--color-standard-top), var(--color-standard-bottom));
+}
+
+nav {
+    display: flex;
+    padding: 20px;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    
+    
+}
+
+.menu > li {
+    position: relative; /* Necessário para posicionar o submenu */
+    display: inline-block;
+    padding: 15px 20px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.menu > li > a {
+    color: white;
+    text-decoration: none;
+ }
+
+.menu > li > a:hover {
+    text-decoration: none;
+}
+
+.menu > li:hover {
+    background-color: #fddc20;
+    border-radius: 50px;
+}
+
+.submenu {
+    display: none; /* Submenu oculto inicialmente */
+    position: absolute;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    top: 100%; /* Alinhado ao final do item de menu */
+    left: 0;
+    min-width: 150px;
+    background-color: #fddc20;
+    
+}
+
+.submenu li {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.submenu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.submenu li a:hover {
+    color: red;
+}
+
+.menu > li:hover .submenu {
+    display: flex;
+    flex-direction: row; /* Submenu aparece ao passar o mouse */
+}
+.title-photos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100vw;
+    margin: 0;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: -300px;
+    margin-left: 200px;
+    color: white;
+}
+
+.carousel{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 100vw;
+        margin: 0;
+        /* background-color: #f0f0f0; /* cor de fundo*/   
+}
+
+/* Contêiner do carrossel */
+.carousel-container {
+    position: relative;
+    max-width: 100vw;
+    overflow: hidden;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+  }
+  
+  /* Estilo do carrossel */
+  .carousel {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Imagens do carrossel */
+  .carousel img {
+    width: 700px;
+    display: none;
+    border-radius: 50px;
+  }
+  
+  .carousel img.active {
+    display: block;
+  }
+  
+ 
