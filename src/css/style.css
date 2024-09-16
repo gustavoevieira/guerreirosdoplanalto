@@ -11,233 +11,157 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
     background: radial-gradient(var(--color-standard-top), var(--color-standard-bottom));
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Responsividade geral */
+header, nav, main, footer {
+    width: 100%;
+    margin: 0 auto;
 }
 
 nav {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     padding: 20px;
+    color: white;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
 }
 
 .menu {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    
-    
+    list-style: none;
+    padding: 0;
 }
 
 .menu > li {
-    position: relative; /* Necessário para posicionar o submenu */
-    display: inline-block;
-    padding: 15px 20px;
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
+    padding: 15px;
+    position: relative;
 }
 
 .menu > li > a {
     color: white;
     text-decoration: none;
- }
-
-.menu > li > a:hover {
-    text-decoration: none;
 }
 
-.menu > li:hover {
-    background-color: #fddc20;
-    border-radius: 50px;
+.menu li:hover > .submenu {
+    display: flex;
 }
 
 .submenu {
-    display: none; /* Submenu oculto inicialmente */
+    display: none;
     position: absolute;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    top: 100%; /* Alinhado ao final do item de menu */
+    top: 100%;
     left: 0;
-    min-width: 150px;
     background-color: #fddc20;
+    list-style: none;
     z-index: 1;
-    
 }
 
 .submenu li {
-    display: flex;
-    flex-direction: row;
     padding: 10px 20px;
-    color: white;
-    cursor: pointer;
 }
 
-.submenu li a {
-    color: white;
-    text-decoration: none;
-}
-
-.submenu li a:hover {
-    color: red;
-}
-
-.menu > li:hover .submenu {
-    display: flex;
-    flex-direction: row; /* Submenu aparece ao passar o mouse */
-}
-
-/* Contêiner do letreiro */
 .marquee-container {
     width: 100%;
     overflow: hidden;
     background-color: #333;
-    color: white;
     padding: 10px 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Letreiro contínuo */
-  .marquee {
-    display: inline-block;
+    color: white;
+}
+
+.marquee {
     white-space: nowrap;
     animation: scroll-left 25s linear infinite;
-  }
-  
-  /* Texto dentro do letreiro */
-  .marquee p {
-    display: inline;
-    font-size: 1.5em;
-    padding: 0 20px;
-  }
-  
-  /* Animação da rolagem contínua */
-  @keyframes scroll-left {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
+}
+
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
 
 .title-photos {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: auto;
-    width: 100vw;
-    margin: 0;
 }
-.title{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: -300px;
-    margin-left: 200px;
+
+.title {
     color: white;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.carousel{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: auto;
-        width: 100vw;
-        margin: 0;
-        /* background-color: #f0f0f0; /* cor de fundo*/   
-}
-
-/* Contêiner do carrossel */
+/* Carrossel */
 .carousel-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
     position: relative;
-    max-width: 100vw;
     overflow: hidden;
     border-radius: 10px;
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
-  }
-  
-  /* Estilo do carrossel */
-  .carousel {
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Imagens do carrossel */
-  .carousel img {
-    width: 700px;
-    display: none;
-    border-radius: 50px;
-  }
-  
-  .carousel img.active {
-    display: block;
-  }
+}
 
-  /* Footer geral */
+.carousel img {
+    width: 100%;
+    display: none;
+}
+
+.carousel img.active {
+    display: block;
+}
+
+/* Footer */
 footer {
     background-color: #333;
     color: white;
     padding: 20px;
     text-align: center;
-    font-family: Arial, sans-serif;
-  }
+}
 
-  
-  .footer-info p {
+.footer-info p, .footer-links a {
     margin: 5px 0;
     font-size: 14px;
-  }
-  
-  /* Links do footer */
-  .footer-links {
-    margin: 10px 0;
-  }
-  
-  .footer-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 16px;
-  }
-  
-  .footer-links a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Ícones de redes sociais no footer */
-  .footer-social {
-    margin: 10px 0;
-  }
-  
-  .footer-social a {
-    color: white;
-    font-size: 20px;
-    margin: 0 10px;
-    text-decoration: none;
-  }
-  
-  .footer-social a:hover {
-    color: #ddd;
-  }
-  
-  /* Estilo do botão "Voltar ao Topo" */
-  .back-to-top {
-    margin-top: 15px;
-  }
-  
-  .back-to-top a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-  }
-  
-  .back-to-top a:hover {
-    text-decoration: underline;
-  }
-  
-  
- 
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .title img {
+        width: 300px;
+    }
+
+    .carousel-container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu > li {
+        padding: 10px;
+    }
+
+    .title h1, .title h2 {
+        font-size: 1.2em;
+    }
+
+    .footer-info p {
+        font-size: 12px;
+    }
+}
