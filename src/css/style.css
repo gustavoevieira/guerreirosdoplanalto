@@ -176,5 +176,68 @@ nav {
   .carousel img.active {
     display: block;
   }
+
+  /* Footer geral */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+
+  
+  .footer-info p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  /* Links do footer */
+  .footer-links {
+    margin: 10px 0;
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Ícones de redes sociais no footer */
+  .footer-social {
+    margin: 10px 0;
+  }
+  
+  .footer-social a {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .footer-social a:hover {
+    color: #ddd;
+  }
+  
+  /* Estilo do botão "Voltar ao Topo" */
+  .back-to-top {
+    margin-top: 15px;
+  }
+  
+  .back-to-top a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .back-to-top a:hover {
+    text-decoration: underline;
+  }
+  
   
  
