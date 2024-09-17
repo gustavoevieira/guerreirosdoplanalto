@@ -26,6 +26,41 @@ header, nav, main, footer {
     margin: 0 auto;
 }
 
+header {
+    /* Estilo da barra */
+    width: 100%;
+    background: linear-gradient(90deg, #e32403, #ffa500, #e8c400);
+    background-size: 300% 100%;
+    animation: changeColor 10s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+/* Animação para mudar de cor (da direita para a esquerda) */
+@keyframes changeColor {
+    0% {
+        background-position: 100% 0;
+    }
+    50% {
+        background-position: 0% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+/* Animação de brilho */
+@keyframes glowing {
+    0% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -89,13 +124,14 @@ nav {
 
 @keyframes scroll-left {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    100% { transform: translateX(-100%); }
 }
 
 .title-photos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    margin-left: 150px;
     align-items: center;
 }
 
