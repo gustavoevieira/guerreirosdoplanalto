@@ -109,6 +109,58 @@ nav {
     padding: 10px 20px;
 }
 
+/* Estilos para o menu hambúrguer */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+}
+
+.hamburger span {
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Menu visível para desktop */
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+/* Responsividade - Mostrar o menu hambúrguer em dispositivos móveis */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li {
+        padding: 15px;
+        border-bottom: 1px solid #fff;
+    }
+
+    .menu li a {
+        color: white;
+    }
+}
+
+
 .marquee-container {
     width: 100%;
     overflow: hidden;
@@ -130,15 +182,17 @@ nav {
 .title-photos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-left: 150px;
     align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    margin: 0px 100px;
 }
 
 .title {
     color: white;
     text-align: center;
     margin-bottom: 20px;
+    
 }
 
 /* Carrossel */

@@ -20,3 +20,9 @@ function prevSlide() {
 
 // Troca automática de slides a cada 4 segundos
 setInterval(nextSlide, 3200);
+
+function toggleMenu() {
+  const menu = document.querySelector('.menu');
+  menu.classList.toggle('active');
+}
+
