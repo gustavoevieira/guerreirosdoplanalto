@@ -21,8 +21,11 @@ function prevSlide() {
 // Troca automática de slides a cada 4 segundos
 setInterval(nextSlide, 3200);
 
-function toggleMenu() {
-  const menu = document.querySelector('.menu');
-  menu.classList.toggle('active');
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
 }
-
