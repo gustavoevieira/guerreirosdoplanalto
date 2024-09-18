@@ -29,3 +29,11 @@ function myFunction() {
     x.className = "topnav";
   }
 }
+
+document.querySelectorAll('.toggle-content').forEach(function(h2) {
+  h2.addEventListener('click', function() {
+      this.classList.toggle('active');
+      let arrow = this.querySelector('.arrow');
+      arrow.textContent = arrow.textContent === '▼' ? '▲' : '▼';
+  });
+});
